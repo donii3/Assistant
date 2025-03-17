@@ -1,0 +1,19 @@
+.user-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .profile-menu {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    width: 150px;
+    z-index: 1000;
+    border: 1px solid #ddd;
+  }
+  
+  .profile-menu p {
+    margin: 0;
+    text-align: center;
+  }
+  
