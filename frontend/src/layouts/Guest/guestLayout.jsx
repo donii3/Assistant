@@ -5,10 +5,8 @@ const GuestLayout = () => {
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem("user"));
 
-  const handleUserClick = () => {
-    if (!user) {
-      navigate("/login"); // Redirect to login only if the user is not logged in
-    }
+  const handleLoginClick = () => {
+    navigate("/login");
   };
 
   return (
@@ -18,13 +16,17 @@ const GuestLayout = () => {
           <img src="/logo.png" alt="logo" />
           <span>Assistant</span>
         </Link>
-        <div
-          className="user"
-          onClick={handleUserClick}
-          style={{ cursor: user ? "default" : "pointer" }}
-        >
-          Login
-        </div>
+
+        {/* Only show login button if user is not logged in */}
+        {!user && (
+          <div
+            className="user"
+            onClick={handleLoginClick}
+            style={{ cursor: "pointer" }}
+          >
+            Login
+          </div>
+        )}
       </header>
 
       <main>
