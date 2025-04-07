@@ -22,6 +22,11 @@
     }
   }
 
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
   main {
     flex: 1;
     overflow: hidden;
